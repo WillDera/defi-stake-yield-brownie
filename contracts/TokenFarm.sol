@@ -87,6 +87,7 @@ contract TokenFarm is Ownable {
         }
     }
 
+    // get value of total token staked
     function getUserTotalValue(address _user) public view returns (uint256) {
         uint256 totalValue = 0;
         require(uniqueTokensStaked[_user] > 0, "No tokens staked!");
@@ -105,7 +106,6 @@ contract TokenFarm is Ownable {
         return totalValue;
     }
 
-    // get value of total token staked
     function getUserSingleTokenValue(address _user, address _token)
         public
         view
