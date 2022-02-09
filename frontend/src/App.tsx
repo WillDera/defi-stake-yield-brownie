@@ -1,6 +1,9 @@
 import React from 'react';
 import './App.css';
 import { DAppProvider, ChainId } from "@usedapp/core"
+import { Header } from "./components/Header"
+import { Container } from "@mui/material"
+import { Main } from "./components/Main"
 
 function App() {
   return (
@@ -8,7 +11,12 @@ function App() {
       supportedChains: [ChainId.Kovan, ChainId.Rinkeby]
     }}>
       <div className="App">
-        Hello
+        <Header/>
+        <Container>
+          
+          Hello
+          <Main />
+        </Container>
       </div>
     </DAppProvider>
   );
